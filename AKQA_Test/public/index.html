@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Shopping Cart</title>
+        <meta name="description" content="AKWA Your Shopping Cart Test">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <!-- Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700%7CDroid+Serif:400,700" rel="stylesheet" type="text/css">
+        <!-- Styles -->
+        <link rel="stylesheet" href="/css/main.css" type="text/css">
+
+        <!--[if lte IE 8]>
+            <script>
+                document.createElement('header');
+                document.createElement('footer');
+            </script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="wrapper">
+
+            <header>
+                <h1>Your Basket</h1>
+                <p>Items you have added to your basket are shown below. <br/>Adjust the quantities or remove items before continuing your purchase.</p>
+            </header>
+    
+            <form action="/submit" method="post">
+                <table>                
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+							<td>
+								<img class="product-image" src="img/cotton_shirt.png" /><br />
+                                <span>Cotton T-Shirt, Medium</span>
+                                <input type="hidden" name="row1_product" value="Cotton T-Shirt, Medium"/>
+                            </td>
+                            <td class="price">
+                                <span>£2.99</span>
+                                <input type="hidden" name="row1_price" value="1.99"/>
+                            </td>
+                            <td>
+                                <input type="text" class="quantity" value="1"/>
+                                <span class="quantity">
+                                    <a class="plus" >+</a>
+                                    <a class="minus">-</a>
+                                </span>
+                            </td>
+                            <td class="cost">
+                                <span>£3.99</span>
+                                <input type="hidden" name="row1_cost" value="1.99"/>
+                                <a href="#" class="remove-item icon-trash"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+								<img class="product-image" src="img/baseball_cap.png" /><br />
+                                <span>Baseball Cap, One Size</span>
+                                 <input type="hidden" name="row2_product" value="Cotton T-Shirt, Medium"/>
+                            </td>
+                            <td class="price">
+                                <span>£4.99</span>
+                                <input type="hidden" name="row2_price" value="2.99"/>
+                            </td>
+                            <td>
+                                <input type="text" class="quantity" value="2"/>
+                                <span class="quantity">
+                                    <a class="plus" >+</a>
+                                    <a class="minus">-</a>                                </span>
+                            </td>
+                            <td class="cost">
+                                <span>£5.98</span>
+                                <input type="hidden" name="row2_cost" value="5.98"/>
+                                <a href="#" class="remove-item icon-trash"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+								<img class="product-image" src="img/swim_shorts.png" /><br />
+                                <span>Swim Shorts, Medium</span>
+                                <input type="hidden" name="row3_product" value="Swim Shorts, Medium"/>
+                            </td>
+                            <td class="price">
+                                <span>£3.99</span>
+                                <input type="hidden" name="row3_price" value="3.99"/>
+                            </td>
+                            <td>
+                                <input type="text" class="quantity" value="1"/>
+                                <span class="quantity">
+                                    <a class="plus" >+</a>
+                                    <a class="minus">-</a>
+                                </span>
+                            </td>
+                            <td class="cost">
+                                <span>£3.99</span>
+                                <input type="hidden" name="row3_cost" value="3.99"/>
+                                <a href="#" class="remove-item icon-trash"></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><span>Subtotal</span></td>
+                            <td class="subtotal">
+                                <span> £11.96</span>
+                                <input type="hidden"  name="subtotal_" value="11.96"/>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="3"><span>VAT @ 20%</span></td>
+                            <td class="vat">
+                                <span> £2.39</span>
+                                <input type="hidden"  name="vat_" value="2.39"/>
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <td colspan="3"><span>Total Cost</span></td>
+                            <td class="total-cost">
+                                <span>£14.35</span>
+                                <input type="hidden"  name="total_cost" value="14.35"/>
+                            </td>
+                            
+                        </tr>
+                    </tfoot>
+                </table>
+                <input type="submit" value="Buy Now &raquo;">
+            </form>
+        </div>
+
+        <footer>
+            <p>&copy;<strong>2021 AKQA Ltd.</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="/dist/prod.js"></script>
+
+      
+    </body>
+</html>
